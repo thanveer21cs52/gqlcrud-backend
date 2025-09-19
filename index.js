@@ -28,7 +28,7 @@ await server.start();
 
 app.use('/graphql', express.json(), expressMiddleware(server));
 
-httpServer.listen(4000, () => {
-  console.log(`🚀 HTTP ready at http://localhost:${4000}/graphql`);
-  console.log(`🔄 Subscriptions ready at ws://localhost:${4000}/graphql`);
+httpServer.listen(process.env.PORT, () => {
+  console.log(`🚀 HTTP ready at http://localhost:${process.env.PORT}/graphql`);
+  console.log(`🔄 Subscriptions ready at ws://localhost:${process.env.PORT}/graphql`);
 });
