@@ -10,9 +10,7 @@ import cors from 'cors'
 
 
 const app = express();
-app.use(cors({
-  path:'http://localhost:3000'
-}))
+app.use(cors())
 export const pubsub = new PubSub();
 const httpServer = createServer(app)
 const wsServer = new WebSocketServer({
