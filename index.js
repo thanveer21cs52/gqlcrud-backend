@@ -10,7 +10,9 @@ import cors from 'cors'
 
 
 const app = express();
-app.use(cors())
+app.use(cors({
+  path:"https://gql-crud-frondend.vercel.app"
+}))
 export const pubsub = new PubSub();
 const httpServer = createServer(app)
 const wsServer = new WebSocketServer({
