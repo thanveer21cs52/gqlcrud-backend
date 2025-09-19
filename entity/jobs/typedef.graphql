@@ -1,0 +1,7 @@
+type job{
+    id:id!
+    name:string!
+}
+type query{
+    me:string
+}
